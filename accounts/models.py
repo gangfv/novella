@@ -9,7 +9,8 @@ class Level(models.Model):
 
 
 class CustomUser(AbstractUser):
-    level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True)
+    level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True, blank=True)
+    money = models.IntegerField(default=40000)
 
     def __str__(self):
         return self.username

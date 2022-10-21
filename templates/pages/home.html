@@ -1,8 +1,19 @@
 {% extends '_base.html' %}
 {% load static %}
 
-{% block title %}Главная{% endblock title %}
+{% block title %}Уровни{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+{% endblock %}
 
 {% block content %}
-
+    <h1 class="center">КОГО ТЫ ВЫБЕРЕШЬ ИХ ИЛИ НАС НАС ИЛИ ИХ</h1>
+    <section class="section section--btns">
+        <form method="post" class="container">
+            {% csrf_token %}
+            <button class="btn" name="easy">Легко</button>
+            <button class="btn" name="normal">Средне</button>
+            <button class="btn" name="hard">Сложно</button>
+        </form>
+    </section>
 {% endblock content %}
