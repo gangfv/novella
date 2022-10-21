@@ -32,3 +32,7 @@ apt-get update
 ```
 apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
+Запуск проекта (изменить в settings на postgresql)
+```
+docker compose up --build
+```
