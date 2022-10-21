@@ -11,10 +11,11 @@
     align-items: center;
 }
 
-@mixin font($size, $color: #000, $lheight: normal) {
+@mixin font($size, $weight: 400, $color: #fff,  $lheight: normal) {
     color: $color;
     font-size: $size;
     line-height: $lheight;
+    font-weight: $weight;
 }
 
 @mixin box($width, $height: $width) {

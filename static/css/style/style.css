@@ -1,14 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 * {
   padding: 0px;
   margin: 0px;
   border: none;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 :focus,
@@ -16,13 +10,7 @@
   outline: none;
 }
 
-a:focus,
-a:active {
-  outline: none;
-}
-
-/* Links */
-a, a:link, a:visited {
+a {
   text-decoration: none;
   display: inline-block;
 }
@@ -31,43 +19,8 @@ a:hover {
   text-decoration: none;
 }
 
-/* Common */
-aside, nav, footer, header, section, main {
-  display: block;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 ul, ul li {
   list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-img, svg {
-  max-width: 100%;
-  height: auto;
-}
-
-address {
-  font-style: normal;
-}
-
-/* Form */
-input, textarea, button, select {
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background-color: transparent;
-}
-
-input::-ms-clear {
-  display: none;
 }
 
 button, input[type="submit"] {
@@ -89,15 +42,182 @@ button::-moz-focus-inner {
   border: 0;
 }
 
-label {
-  cursor: pointer;
-}
-
-legend {
-  display: block;
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
 }
 
 .active {
   display: inline-block !important;
+}
+
+.container {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header {
+  width: 100%;
+  height: 30px;
+  background-color: #3d7f38;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__text, .header__link {
+  font-family: 'Comfortaa', cursive;
+  color: #fff;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.header__link {
+  color: #fff;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
+.header__link:first-child {
+  border-right: 2px solid #fff;
+}
+
+.section {
+  height: calc(100vh - 30px);
+  position: relative;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+.desc {
+  height: 5%;
+  overflow: hidden;
+}
+
+.main__text {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.text {
+  color: #fff;
+  font-size: 21px;
+  line-height: 2;
+  font-weight: 700;
+  max-width: 80vw;
+}
+
+.stages-line {
+  display: -ms-grid;
+  display: grid;
+  grid-template: 'first second third' 1fr 'none none forth' 1fr / -webkit-max-content -webkit-max-content -webkit-max-content;
+  grid-template: 'first second third' 1fr 'none none forth' 1fr / max-content max-content max-content;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: calc(200vh - 60px);
+  -webkit-transition: all 25s;
+  transition: all 25s;
+}
+
+.stage {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100vw;
+  height: calc(100vh - 30px);
+}
+
+.stage--first {
+  grid-area: first;
+}
+
+.stage--second {
+  grid-area: second;
+}
+
+.stage--second {
+  grid-area: second;
+}
+
+.stage--third {
+  grid-area: third;
+}
+
+.stage--none {
+  grid-area: none;
+}
+
+.stage--forth {
+  grid-area: forth;
+}
+
+.section--btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  background-color: #50b848;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  line-height: normal;
+  font-weight: 700;
+  display: inline-block;
+  width: 8em;
+  padding: 1em;
+  border-radius: .5em;
+}
+
+.btn:hover {
+  background-color: #3d7f38;
 }
 /*# sourceMappingURL=style.css.map */

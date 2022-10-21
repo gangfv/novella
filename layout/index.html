@@ -11,8 +11,49 @@
         <title>Главная</title>
     </head>
     <body>
-        <svg class="svg">
-            <use xlink:href="../static/images/icons/sprite.svg#tel"></use>
-        </svg>
+        <header class="header">
+            <div class="container">
+                <div class="header__step">
+                    <p class="header__text">Шаг</p>
+                </div>
+
+                <div class="header__auth-state">
+                    <a href="#" class="header__link">Валерчик</a>
+                    <a href="#" class="header__link">Ваш счет: 5000</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="section">
+                
+                <div class="stages-line" id="line">
+                    <div class="stage stage--first" style="background-image: url('../static/images/screen_1/garden_1.jpg');"></div>
+                    <div class="stage stage--second" style="background-image: url('../static/images/screen_1/gori_1.png');"></div>
+                    <div class="stage stage--third" style="background-image: url('../static/images/screen_1/porch_1.jpg');"></div>
+                    <div class="stage--none"></div><div class="stage--none"></div>
+                    <div class="stage stage--forth" style="background-image: url('../static/images/screen_1/room_1.jpg');"></div>
+                </div>
+
+                <div class="background">
+                    <div class="desc" id="desc">
+                        <p class="main__text text" id="desc__text">
+                            Представьте перед вами прекрасные горные пейзажи Каваказа, ветер обдувает ваше лицо, вы несетесь вдаль на Porsche Cayenne 
+                            и ощущаете вкус счастья. НО! 
+                        </p>
+
+                        <p class="main__text text" id="desc__text">
+                            НО! Вдруг незадача - вы просыпаетесь в своей Ростовской камуналке, на вас дует всего лишь 
+                            вентилятор, за окном пейзаж из серых панелек, а под подъездом у вас стоит не Porsche Cayenne, а доставшийся от дедушки 
+                            советский велосипед. Грустненько.......
+                        </p>
+                    </div>
+                    
+                </div>
+            </section>
+        </main>
+
+
+        <script src="../static/js/screen_1/switching.js"></script>
     </body>
 </html>
