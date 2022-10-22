@@ -49,6 +49,12 @@ body {
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
+
+  background-color: #f8fff4 !important;
+}
+
+.weight {
+  font-weight: 700;
 }
 
 .active {
@@ -56,7 +62,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,6 +110,14 @@ body {
   border-right: 2px solid #fff;
 }
 
+.header__money {
+  color: #fff;
+  font-size: 16px;
+  line-height: normal;
+  font-weight: 600;
+  padding: 0 20px;
+}
+
 .section {
   height: calc(100vh - 30px);
   position: relative;
@@ -111,14 +125,124 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #fff;
+  background-color: #f8fff4;
+
+  width: 100%;
 }
+.section--img {
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
 
 .background {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 2;
+}
+
+.main {
+  min-height: calc(100vh - 30px);
+  max-height: max-content;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 28px;
+  text-align: center;
+
+  padding: 0 10px;
+  margin: 20px 0 20px;
+}
+
+.reg-form {
+  width: 90%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 40px;
+}
+
+.label {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+.field {
+  width: 100%;
+
+  margin-bottom: 30px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.field input {
+  width: 100%;
+
+  font-size: 21px;
+  color: #ffffff;
+  font-weight: 700;
+
+  /*border: 2px solid #3d7f38;*/
+  border-radius: 10px;
+
+  background-color: #50b84860;
+
+  padding: 5px 10px;
+
+}
+
+.field input::placeholder {
+  color: #00000000;
+}
+
+.errorlist li {
+  font-size: 14px;
+  color: red;
+  line-height: 1;
+  text-align: center;
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-weight: 700;
+
+  padding: 10px 0;
+  border-radius: 10px;
+
+  background-color: #50b848;
+}
+
+.auth {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 10px 0;
+}
+
+.auth__link {
+  font-size: 16px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  color: #3d7f38;
 }
 
 .desc {
@@ -133,7 +257,7 @@ body {
 
 .text {
   color: #fff;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 2;
   font-weight: 700;
   max-width: 80vw;
@@ -189,6 +313,8 @@ body {
 }
 
 .section--btns {
+  width: 100%;
+  height: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -213,12 +339,21 @@ body {
   font-weight: 700;
   display: inline-block;
   width: 8em;
-  padding: 1em;
+  padding: .5em;
   border-radius: .5em;
 }
 
 .btn:hover {
   background-color: #3d7f38;
+}
+
+.text--black {
+  color: #000000;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 16px;
+
+  margin-bottom: 10px;
 }
 
 .text--short {
@@ -244,8 +379,93 @@ body {
           justify-content: center;
 }
 
-.center {
+.home-title {
+  font-size: 24px;
   text-align: center;
+
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.warner {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #202020;
+}
+
+.warner__title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+
+
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.warner__icon {
+  fill: #fff;
+  width: 60vw;
+  height: 60vw;
+}
+
+.container--form {
+  width: 100%;
+  padding: 0 10px;
+
+}
+
+.next-link {
+  color: #50b848;
+  font-size: 20px;
+  font-weight: 700;
+
+
+  display: flex;
+  align-items: center;
+}
+
+.next-link span {
+  color: inherit;
+  font-size: 1.5em;
+
+}
+
+.article {
+  max-width: 50vw;
+  height: max-content;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  z-index: 2;
+
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.stonks-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  z-index: 1;
+
+  height: 240px;
+  width: 320px;
 }
 
 /*# sourceMappingURL=style.css.map */

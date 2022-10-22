@@ -10,11 +10,25 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Регистрация</h2>
-    <form method="post">
+    <h1 class="title">Зарегистрируйтесь, чтобы начать игру</h1>
+    <form method="post" class="reg-form">
         {% csrf_token %}
-        {{ form.username }}
-        {{ form.password1 }}
-        <button class="btn btn-success" type="submit">Регистрация</button>
+        <div class="field">
+            {% if form.username.errors %}{{ form.username.errors }}{% endif %}
+            <label class="label">Придумайте имя пользователя</label>
+            {{ form.username }}
+        </div>
+        <div class="field">
+            <label class="label">Придумайте любой простой пароль</label>
+            {{ form.password1 }}
+        </div>
+
+
+        <button class="btn-submit" type="submit">Регистрация</button>
+        <div class="auth">
+            <a href="{% url 'account_login' %}" class="auth__link">Войти</a>
+        </div>
     </form>
+
+
 {% endblock content %}

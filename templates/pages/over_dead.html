@@ -14,4 +14,6 @@
             <button class="btn" name="{% if user.is_authenticated %}{{ user.level_id }}{% endif %}">Заново</button>
         </a>
     </form>
+
+    <script src="{% static 'js/orientation.js' %}"></script>
 {% endblock content %}

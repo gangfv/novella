@@ -6,14 +6,9 @@
     <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
 {% endblock %}
 {% block money %}
-    <a href="#" class="header__link">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
+    <a href="#" class="header__money">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
 {% endblock %}
 
-{% block step %}
-    <div class="header__step">
-        <p class="header__text">Шаг 1</p>
-    </div>
-{% endblock %}
 
 
 
@@ -82,6 +77,8 @@
 
         </div>
     </section>
+
+    <script src="{% static 'js/orientation.js' %}"></script>
 {% endblock content %}
 {% block javascript %}
     <script src="{% static 'js/screen_1/switching.js' %}"></script>
