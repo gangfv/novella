@@ -8,7 +8,7 @@ from accounts.models import CustomUser
 class HomePageView(LoginRequiredMixin, TemplateView):
     model = CustomUser
     template_name = "pages/home.html"
-    login_url = 'account_login'
+    login_url = 'account_signup'
 
     def post(self, request, *args, **kwargs):
         if 'easy' in request.POST:

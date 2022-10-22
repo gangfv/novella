@@ -7,12 +7,14 @@ from django.views.generic import TemplateView, ListView
 from accounts.models import CustomUser, Products
 
 
-class LevelOnePages(TemplateView):
+class LevelOnePages(LoginRequiredMixin, TemplateView):
     template_name = "pages/level_1.html"
+    login_url = 'account_login'
 
 
-class LessonPage(TemplateView):
+class LessonPage(LoginRequiredMixin, TemplateView):
     template_name = 'pages/learn.html'
+    login_url = 'account_login'
 
 
 def products_value(request, money, money_sell):
@@ -64,7 +66,7 @@ def play_money(request, money):
         messages.info(request, 'У вас не хватает денег!')
 
 
-class PlayGame(ListView):
+class PlayGame(LoginRequiredMixin, ListView):
     model = Products
     context_object_name = 'product'
     template_name = 'pages/play_game.html'
