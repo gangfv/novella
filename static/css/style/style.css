@@ -221,6 +221,29 @@ body {
   background-color: #3d7f38;
 }
 
+.text--short {
+  max-width: 400px;
+}
+
+.text--left {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 400px;
+}
+
+.btn-area {
+  position: absolute;
+  bottom: 5%;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .center {
   text-align: center;
 }

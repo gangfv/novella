@@ -1,4 +1,4 @@
-@import '../scss/base';
+@import '../scss/base.scss';
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 * {
@@ -200,3 +200,25 @@ body {
 	background-color: #3d7f38;
 }
 
+.text--short {
+	max-width: 400px;
+}
+
+.text--left {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	max-width: 400px;
+}
+
+
+
+.btn-area {
+	position: absolute;
+	bottom: 5%;
+	width: 100vw;
+
+	display: flex;
+	justify-content: center;
+}
