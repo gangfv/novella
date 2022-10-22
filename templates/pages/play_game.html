@@ -8,5 +8,10 @@
 
 {% block content %}
     <section class="section section--btns">
+        {% if user.is_authenticated %}
+            {% for products in user.products_user_full.all %}
+                <p>{{ products }}</p>
+            {% endfor %}
+        {% endif %}
     </section>
 {% endblock content %}

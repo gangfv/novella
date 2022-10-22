@@ -1,6 +1,8 @@
 from django.shortcuts import redirect
 from django.views.generic import TemplateView
 
+from accounts.models import Product, CustomUser
+
 
 class LevelOnePages(TemplateView):
     template_name = "pages/level_1.html"
@@ -20,4 +22,5 @@ class LessonPage(TemplateView):
 
 
 class PlayGame(TemplateView):
+    model = CustomUser
     template_name = 'pages/play_game.html'
