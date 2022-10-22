@@ -22,5 +22,8 @@ class LessonPage(TemplateView):
 
 
 class PlayGame(TemplateView):
-    model = CustomUser
     template_name = 'pages/play_game.html'
+
+
+class InvestEasy(TemplateView):
+    template_name = 'pages/invest_1.html'
