@@ -7,13 +7,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="center">ВЫ ПОТРАТИЛИ МНОГО ДЕНЕГ ЧТОБЫ ИНВЕСТИРОВАТЬ</h1>
+    <h1 class="center">ВЫ ПОТРАТИЛИ ВСЕ ДЕНЕГ ЧТОБЫ ИНВЕСТИРОВАТЬ</h1>
     <form method="post" class="container">
         {% csrf_token %}
         <a href="{% url 'play_game_products' %}">
             <button class="btn" name="{% if user.is_authenticated %}{{ user.level_id }}{% endif %}">Заново</button>
         </a>
     </form>
-
-    <script src="{% static 'js/orientation.js' %}"></script>
 {% endblock content %}

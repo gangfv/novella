@@ -6,28 +6,176 @@
     <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
 {% endblock %}
 {% block money %}
-    <a href="#" class="header__link">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
+    <a href="#" class="header__money">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
 
 {% endblock %}
 
-{% block step %}
-    <div class="header__step">
-        <p class="header__text">Шаг 3</p>
-    </div>
-{% endblock %}
 {% block content %}
-    <section class="section section--btns">
-        {% for message in messages %}
-            <li{% if message.tags %}{% endif %}>{{ message }}</li>
-        {% endfor %}
-        <form method="post" class="">
-            {% csrf_token %}
-            {% for products in product %}
-                <button class="btn" name="{{ products }}">{{ products }}</button>
-            {% endfor %}
-        </form>
-        <a href="{% url 'invest_easy' %}">Продолжить</a>
+    <section class="section section--market" id="app">
+
+            <div class="shop">
+                <div class="shelf">
+                    <div class="product">
+                        <input v-model="products" value="bread" class="product__input" id="bread" type="checkbox">
+                        <label class="product__label" for="bread">
+                             <img src="{% static 'images/products_game/bread.png' %}" alt="Хлеб">
+                             <p>30 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="nike" class="product__input" id="nike" type="checkbox">
+                        <label class="product__label" for="nike">
+                            <img src="{% static 'images/products_game/nike.png' %}" alt="Nike">
+                            <p>15000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="choco" class="product__input" id="choco" type="checkbox">
+                        <label class="product__label" for="choco">
+                            <img src="{% static 'images/products_game/choco.png' %}" alt="Шоколад">
+                            <p>100 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="shoos" class="product__input" id="shoos" type="checkbox">
+                        <label class="product__label" for="shoos">
+                            <img src="{% static 'images/products_game/shoos.png' %}" alt="Сапоги">
+                            <p>3000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="sweets" class="product__input" id="sweets" type="checkbox">
+                        <label class="product__label" for="sweets">
+                            <img src="{% static 'images/products_game/sweets.png' %}" alt="Сапоги">
+                            <p>300 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="chick" class="product__input" id="chick" type="checkbox">
+                        <label class="product__label" for="chick">
+                            <img src="{% static 'images/products_game/kury.png' %}" alt="Сапоги">
+                            <p>250 руб.</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="shelf">
+                    <div class="product">
+                        <input v-model="products" value="socks" class="product__input" id="socks" type="checkbox">
+                        <label class="product__label" for="socks">
+                            <img src="{% static 'images/products_game/socks.png' %}" alt="Сапоги">
+                            <p>200 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="gucci" class="product__input" id="gucci" type="checkbox">
+                        <label class="product__label" for="gucci">
+                            <img src="{% static 'images/products_game/gucci.png' %}" alt="Сапоги">
+                            <p>5000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="medicine" class="product__input" id="medicine" type="checkbox">
+                        <label class="product__label" for="medicine">
+                            <img src="{% static 'images/products_game/medicine.png' %}" alt="Сапоги">
+                            <p>1000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="dino" class="product__input" id="dino" type="checkbox">
+                        <label class="product__label" for="dino">
+                            <img src="{% static 'images/products_game/dino.png' %}" alt="Сапоги">
+                            <p>500 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="dish" class="product__input" id="dish" type="checkbox">
+                        <label class="product__label" for="dish">
+                            <img src="{% static 'images/products_game/dish.png' %}" alt="Сапоги">
+                            <p>400 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="watch" class="product__input" id="watch" type="checkbox">
+                        <label class="product__label" for="watch">
+                            <img src="{% static 'images/products_game/watch.png' %}" alt="Сапоги">
+                            <p>10000 руб.</p>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="shelf">
+                    <div class="product">
+                        <input v-model="products" value="jacket" class="product__input" id="jacket" type="checkbox">
+                        <label class="product__label" for="jacket">
+                            <img src="{% static 'images/products_game/jacket.png' %}" alt="Сапоги">
+                            <p>7000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="grechka" class="product__input" id="grechka" type="checkbox">
+                        <label class="product__label" for="grechka">
+                            <img src="{% static 'images/products_game/grechka.png' %}" alt="Сапоги">
+                            <p>150 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="sigi" class="product__input" id="sigi" type="checkbox">
+                        <label class="product__label" for="sigi">
+                            <img src="{% static 'images/products_game/sigi.png' %}" alt="Сапоги">
+                            <p>500 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="water" class="product__input" id="water" type="checkbox">
+                        <label class="product__label" for="water">
+                            <img src="{% static 'images/products_game/water.png' %}" alt="Сапоги">
+                            <p>500 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="gold" class="product__input" id="gold" type="checkbox">
+                        <label class="product__label" for="gold">
+                            <img src="{% static 'images/products_game/gold.png' %}" alt="Сапоги">
+                            <p>3000 руб.</p>
+                        </label>
+                    </div>
+
+                    <div class="product">
+                        <input v-model="products" value="ticket" class="product__input" id="ticket" type="checkbox">
+                        <label class="product__label" for="ticket">
+                            <img src="{% static 'images/products_game/ticket.png' %}" alt="Сапоги">
+                            <p>700 руб.</p>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p>[[ money ]]</p>
+                <a href="{% url 'invest_easy' %}">Продолжить</a>
+            </div>
+
     </section>
 
     <script src="{% static 'js/orientation.js' %}"></script>
+
+    <script src="{% static 'js/Axios.js' %}"></script>
+    <script src="{% static 'js/Cookie.js' %}"></script>
+    <script src="{% static 'js/Vue.js' %}"></script>
+    <script src="{% static 'js/products_play/shop.vue.js' %}"></script>
 {% endblock content %}
