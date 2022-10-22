@@ -46,20 +46,20 @@ const Shop = {
     delimiters: ['[[', ']]'],
     data: () => ({
         products: [],
-        money: 0
+        money: 0,
+        currentMoney: 0
     }),
     created() {
         getMoney().then(res => {
             const money = res.data.money
             this.money = money
+            this.currentMoney = money
         })
     },
     watch: {
         products(current, old) {
             const fullCost = current.map(product => costs[product]).reduce( (sum, cost) => sum + cost, )
-
-            console.log(fullCost)
-
+            this.currentMoney = this.money - fullCost
         }
     },
     methods: {}
