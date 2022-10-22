@@ -118,7 +118,7 @@ class OverDeadPageView(LoginRequiredMixin, TemplateView):
 
 class OverSellPageView(LoginRequiredMixin, TemplateView):
     model = CustomUser
-    template_name = "pages/over_dead.html"
+    template_name = "pages/over_sell.html"
     login_url = 'account_login'
 
     def post(self, request, *args, **kwargs):
