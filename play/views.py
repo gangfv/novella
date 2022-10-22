@@ -13,3 +13,11 @@ class LevelOnePages(TemplateView):
     #     elif 'hard' in request.POST:
     #         print("hard")
     #     return redirect('/')
+
+
+class LessonPage(TemplateView):
+    template_name = 'pages/learn.html'
+
+
+class PlayGame(TemplateView):
+    template_name = 'pages/play_game.html'

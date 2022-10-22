@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
 {% endblock %}
 {% block money %}
-    <a href="#" class="header__link">Ваш счет: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
+    <a href="#" class="header__link">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
 
 {% endblock %}
 
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="btn-area">
-                        <button class="btn btn--center">ОБУЧИТЬСЯ</button>
+                        <a href="{% url 'lesson_page' %}"><button class="btn btn--center">ОБУЧИТЬСЯ</button></a>
                     </div>
 
                 </div>
