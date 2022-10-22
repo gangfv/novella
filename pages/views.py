@@ -14,7 +14,7 @@ class HomePageView(LoginRequiredMixin, TemplateView):
         if 'easy' in request.POST:
             CustomUser.objects.update(level_id=1, money=15000, session_user_id=1)
         elif 'normal' in request.POST:
-            CustomUser.objects.update(level_id=2, money=25000, session_user_id=1)
+            CustomUser.objects.update(level_id=2, money=10000, session_user_id=1)
         elif 'hard' in request.POST:
-            CustomUser.objects.update(level_id=3, money=15000, session_user_id=1)
+            CustomUser.objects.update(level_id=3, money=5000, session_user_id=1)
         return redirect('/play/level_1')

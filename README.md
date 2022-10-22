@@ -36,3 +36,21 @@ apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 docker compose up --build
 ```
+Узнать контейнер WEB
+```
+docker ps
+```
+Создать суперпользователя
+```
+docker exec -ti <container web> python manage.py createsuperuser
+```
+Загрузить шаблоны бд
+```
+docker exec -ti <container web> python manage.py loaddata .\json\level.json
+```
+```
+docker exec -ti <container web> python manage.py loaddata .\json\session.json
+```
+```
+docker exec -ti <container web> python manage.py loaddata .\json\products.json
+```

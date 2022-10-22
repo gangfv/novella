@@ -5,13 +5,27 @@
 {% block css %}
     <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
 {% endblock %}
+{% block money %}
+    <a href="#" class="header__link">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
 
+{% endblock %}
+
+{% block step %}
+    <div class="header__step">
+        <p class="header__text">Шаг 3</p>
+    </div>
+{% endblock %}
 {% block content %}
     <section class="section section--btns">
-        {% if user.is_authenticated %}
-            {% for products in user.products_user_full.all %}
-                <p>{{ products }}</p>
+        {% for message in messages %}
+            <li{% if message.tags %}{% endif %}>{{ message }}</li>
+        {% endfor %}
+        <form method="post" class="">
+            {% csrf_token %}
+            {% for products in product %}
+                <button class="btn" name="{{ products }}">{{ products }}</button>
             {% endfor %}
-        {% endif %}
+        </form>
+        <a href="{% url 'invest_easy' %}">Продолжить</a>
     </section>
 {% endblock content %}

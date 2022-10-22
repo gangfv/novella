@@ -56,18 +56,17 @@ class Level(models.Model):
         return self.levels_full
 
 
-class Product(models.Model):
-    products_full = models.CharField(choices=PRODUCT, null=True, max_length=100)
+class Products(models.Model):
+    product = models.CharField(choices=PRODUCT, null=True, max_length=100)
 
     def __str__(self):
-        return self.products_full
+        return self.product
 
 
 class CustomUser(AbstractUser):
     level = models.ForeignKey(Level, on_delete=models.CASCADE, null=True, blank=True)
     money = models.IntegerField(default=0)
     session_user = models.ForeignKey(Session, on_delete=models.CASCADE, null=True, blank=True)
-    products_user_full = models.ManyToManyField(Product, null=True, blank=True)
 
     def __str__(self):
         return self.username

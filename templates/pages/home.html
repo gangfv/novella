@@ -7,13 +7,16 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="center">КОГО ТЫ ВЫБЕРЕШЬ ИХ ИЛИ НАС НАС ИЛИ ИХ</h1>
+    <h1 class="center">КОГО ТЫ ВЫБЕРЕШЬ ИХ ИЛИ НАС, НАС ИЛИ ИХ</h1>
     <section class="section section--btns">
         <form method="post" class="container">
             {% csrf_token %}
             <button class="btn" name="easy">Легко</button>
+            <p>Подробнее уровень сложности</p>
             <button class="btn" name="normal">Средне</button>
+            <p>Подробнее уровень сложности</p>
             <button class="btn" name="hard">Сложно</button>
+            <p>Подробнее уровень сложности</p>
         </form>
     </section>
 {% endblock content %}

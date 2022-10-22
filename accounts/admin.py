@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import CustomUser, Level, Session, Product
+from .models import CustomUser, Level, Session, Products
 
 
 class CustomUserAdmin(UserAdmin):
@@ -13,7 +12,7 @@ class CustomUserAdmin(UserAdmin):
     list_display = ['email', 'username', 'level', 'money', 'session_user',]
     fieldsets = (
         (None, {
-            'fields': ('email', 'username', 'password', 'level', 'money', 'session_user', 'products_user_full')
+            'fields': ('email', 'username', 'password', 'level', 'money', 'session_user',)
         }),
     )
 
@@ -21,4 +20,4 @@ class CustomUserAdmin(UserAdmin):
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Level)
 admin.site.register(Session)
-admin.site.register(Product)
+admin.site.register(Products)
