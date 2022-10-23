@@ -1,0 +1,128 @@
+[
+  {
+    "model": "accounts.products",
+    "pk": 1,
+    "fields": {
+      "product": "Хлеб 30 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 2,
+    "fields": {
+      "product": "Гречневая крупа 3 кг 150 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 3,
+    "fields": {
+      "product": "Вода 20л 500 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 4,
+    "fields": {
+      "product": "Курица 250 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 5,
+    "fields": {
+      "product": "Конфеты 300 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 6,
+    "fields": {
+      "product": "Шоколад 100 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 7,
+    "fields": {
+      "product": "Зимняя куртка 7000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 8,
+    "fields": {
+      "product": "Коллекционные кроссовки Nike 15 000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 9,
+    "fields": {
+      "product": "Тёплые сапоги 3000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 10,
+    "fields": {
+      "product": "Новогодние носки 200 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 11,
+    "fields": {
+      "product": "Лекарства 1000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 12,
+    "fields": {
+      "product": "Тарелки 400 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 13,
+    "fields": {
+      "product": "Кружка с динозавром 500 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 14,
+    "fields": {
+      "product": "Очки Гучи 5000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 15,
+    "fields": {
+      "product": "Смарт часы 10000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 16,
+    "fields": {
+      "product": "Сигареты 500 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 17,
+    "fields": {
+      "product": "Кольцо 2000 руб"
+    }
+  },
+  {
+    "model": "accounts.products",
+    "pk": 18,
+    "fields": {
+      "product": "Золотая цепь 3000 руб"
+    }
+  }
+]

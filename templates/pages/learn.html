@@ -1,0 +1,30 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Уровни{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+{% endblock %}
+
+{% block money %}
+    <div></div>
+{% endblock %}
+
+
+{% block content %}
+    <section class="section section--img" style="background-image: url({% static '/images/screen_2/stonks.jpg' %})">
+        <article class="article">
+            <p class="text text--black">
+                Один из базовых принципов финансовой грамотности - <span
+                    class="weight">доходы должны привышать расходы.</span>
+                Для того чтобы сделать это, Валерчику надо научиться тратить деньги с умом, а именно покупать только
+                необходимые
+                продукты и не тратить зарплату попусту.
+            </p>
+            <a href="{% url 'play_game_products' %}" class="next-link">Вперёд <span class="material-symbols-outlined">arrow_right_alt</span></a>
+        </article>
+
+
+    </section>
+
+{% endblock content %}

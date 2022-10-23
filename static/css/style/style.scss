@@ -1,0 +1,226 @@
+@import '../scss/base.scss';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a  {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+
+
+body {
+	margin: 0;
+
+	font-family: 'Montserrat', sans-serif;
+
+	min-height: 100vh;
+	max-height: max-content;
+}
+
+.active {
+    display: inline-block !important;
+}
+
+.container {
+	width: 80%;
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.header {
+	@include box(100%, 30px);
+
+	background-color: #3d7f38;
+	@include flex-center;
+}
+
+.header__text, .header__link {
+	font-family: 'Comfortaa', cursive;
+	@include font(16px, 500);
+
+}
+
+.header__link {
+	@include font(16px, 600);
+
+	padding: 0 20px;
+}
+
+.header__link:first-child {
+	border-right: 2px solid #fff;
+}
+
+.section {
+	height: calc(100vh - 30px);
+
+	position: relative;
+
+	overflow: hidden;
+
+	display: flex;
+
+	background-color: #fff;
+}
+
+
+
+.background {
+	@include box(100%);
+
+	background-color: rgba($color: #000000, $alpha: 0.7);
+
+	z-index: 2;
+}
+
+.desc {
+	height: 5%;
+
+	overflow: hidden;
+
+}
+
+.main__text {
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+
+.text {
+	@include font(21px, 700, #fff, 2);
+
+	max-width: 80vw;
+}
+
+
+.stages-line {
+	display: grid;
+	grid-template: 'first second third' 1fr 'none none forth' 1fr / max-content max-content max-content;
+
+	z-index: 1;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: max-content;
+	height: calc(200vh - 60px);
+
+	transition: all 25s;
+}
+
+
+.stage {
+	@include cover-background;
+
+	width: 100vw;
+	height: calc(100vh - 30px);
+}
+
+.stage--first {
+	grid-area: first;
+}
+
+.stage--second {
+	grid-area: second;
+}
+
+.stage--second {
+	grid-area: second;
+}
+
+.stage--third {
+	grid-area: third;
+}
+
+.stage--none {
+	grid-area: none;
+}
+
+.stage--forth {
+	grid-area: forth;
+}
+
+.section--btns {
+	@include flex-center;
+}
+
+.btn {
+	background-color: #50b848;
+
+	text-align: center;
+	@include font(25px, 700);
+
+	display: inline-block;
+
+	width: 8em;
+	padding: 1em;
+
+	border-radius: .5em;
+}
+
+.btn:hover {
+	background-color: #3d7f38;
+}
+
+.text--short {
+	max-width: 400px;
+}
+
+.text--left {
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	max-width: 400px;
+}
+
+
+
+.btn-area {
+	position: absolute;
+	bottom: 5%;
+	width: 100vw;
+
+	display: flex;
+	justify-content: center;
+}

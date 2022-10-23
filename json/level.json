@@ -1,0 +1,23 @@
+[
+  {
+    "model":"accounts.level",
+    "pk":1,
+    "fields":{
+      "levels_full": "Легкий"
+    }
+  },
+  {
+    "model":"accounts.level",
+    "pk":2,
+    "fields":{
+      "levels_full": "Нормальный"
+    }
+  },
+    {
+    "model":"accounts.level",
+    "pk":3,
+    "fields":{
+      "levels_full": "Сложный"
+    }
+  }
+]

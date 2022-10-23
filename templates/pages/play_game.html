@@ -1,0 +1,237 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Уровни{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+{% endblock %}
+{% block money %}
+    <a href="#" class="header__money">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
+
+{% endblock %}
+
+{% block content %}
+    <section class="section section--market" id="app">
+
+        <div class="shop">
+            <div class="shelf">
+                <div class="product">
+                    <input v-model="products" value="bread" class="product__input" id="bread" type="checkbox">
+                    <label class="product__label" for="bread">
+                        <img src="{% static 'images/products_game/bread.png' %}" alt="Хлеб">
+                        <p>30 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="nike" class="product__input" id="nike" type="checkbox">
+                    <label class="product__label" for="nike">
+                        <img src="{% static 'images/products_game/nike.png' %}" alt="Nike">
+                        <p>15000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="choco" class="product__input" id="choco" type="checkbox">
+                    <label class="product__label" for="choco">
+                        <img src="{% static 'images/products_game/choco.png' %}" alt="Шоколад">
+                        <p>100 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="shoos" class="product__input" id="shoos" type="checkbox">
+                    <label class="product__label" for="shoos">
+                        <img src="{% static 'images/products_game/shoos.png' %}" alt="Сапоги">
+                        <p>3000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="sweets" class="product__input" id="sweets" type="checkbox">
+                    <label class="product__label" for="sweets">
+                        <img src="{% static 'images/products_game/sweets.png' %}" alt="Сапоги">
+                        <p>300 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="chick" class="product__input" id="chick" type="checkbox">
+                    <label class="product__label" for="chick">
+                        <img src="{% static 'images/products_game/kury.png' %}" alt="Сапоги">
+                        <p>250 руб.</p>
+                    </label>
+                </div>
+            </div>
+
+            <div class="shelf">
+                <div class="product">
+                    <input v-model="products" value="socks" class="product__input" id="socks" type="checkbox">
+                    <label class="product__label" for="socks">
+                        <img src="{% static 'images/products_game/socks.png' %}" alt="Сапоги">
+                        <p>200 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="gucci" class="product__input" id="gucci" type="checkbox">
+                    <label class="product__label" for="gucci">
+                        <img src="{% static 'images/products_game/gucci.png' %}" alt="Сапоги">
+                        <p>5000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="medicine" class="product__input" id="medicine" type="checkbox">
+                    <label class="product__label" for="medicine">
+                        <img src="{% static 'images/products_game/medicine.png' %}" alt="Сапоги">
+                        <p>1000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="dino" class="product__input" id="dino" type="checkbox">
+                    <label class="product__label" for="dino">
+                        <img src="{% static 'images/products_game/dino.png' %}" alt="Сапоги">
+                        <p>500 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="dish" class="product__input" id="dish" type="checkbox">
+                    <label class="product__label" for="dish">
+                        <img src="{% static 'images/products_game/dish.png' %}" alt="Сапоги">
+                        <p>400 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="watch" class="product__input" id="watch" type="checkbox">
+                    <label class="product__label" for="watch">
+                        <img src="{% static 'images/products_game/watch.png' %}" alt="Сапоги">
+                        <p>10000 руб.</p>
+                    </label>
+                </div>
+            </div>
+
+            <div class="shelf">
+                <div class="product">
+                    <input v-model="products" value="jacket" class="product__input" id="jacket" type="checkbox">
+                    <label class="product__label" for="jacket">
+                        <img src="{% static 'images/products_game/jacket.png' %}" alt="Сапоги">
+                        <p>7000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="grechka" class="product__input" id="grechka" type="checkbox">
+                    <label class="product__label" for="grechka">
+                        <img src="{% static 'images/products_game/grechka.png' %}" alt="Сапоги">
+                        <p>150 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="sigi" class="product__input" id="sigi" type="checkbox">
+                    <label class="product__label" for="sigi">
+                        <img src="{% static 'images/products_game/sigi.png' %}" alt="Сапоги">
+                        <p>500 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="water" class="product__input" id="water" type="checkbox">
+                    <label class="product__label" for="water">
+                        <img src="{% static 'images/products_game/water.png' %}" alt="Сапоги">
+                        <p>500 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="gold" class="product__input" id="gold" type="checkbox">
+                    <label class="product__label" for="gold">
+                        <img src="{% static 'images/products_game/gold.png' %}" alt="Сапоги">
+                        <p>3000 руб.</p>
+                    </label>
+                </div>
+
+                <div class="product">
+                    <input v-model="products" value="ticket" class="product__input" id="ticket" type="checkbox">
+                    <label class="product__label" for="ticket">
+                        <img src="{% static 'images/products_game/ticket.png' %}" alt="Сапоги">
+                        <p>700 руб.</p>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <p class="shop-text">Осталось денег на покупки: <span class="green weight">[[ currentMoney ]] руб.</span>
+            </p>
+
+            <div v-if="basketMark === 'bad'">
+                <svg class="mark-icon" enable-background="new 0 0 235.33 249.135" height="249.135" id="Layer_1" overflow="visible"
+                     version="1.1" viewBox="0 0 235.33 249.135" width="235.33" xml:space="preserve"
+                     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="122.33" cy="113" fill="#FFE585" r="109"/>
+                    <line enable-background="new    " fill="none" opacity="0.29" stroke="#6E6E96" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="8" x1="98.196" x2="146.196" y1="245.135" y2="245.135"/>
+                    <line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="8" x1="164.063" x2="178.063" y1="245.135" y2="245.135"/>
+                    <line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="8" x1="79.062" x2="68.062" y1="245.135" y2="245.135"/>
+                    <path d="M119.971,3.947c-1.026,0-2.049,0.017-3.069,0.045  c54.425,1.551,98.069,46.155,98.069,100.955c0,55.781-45.219,101-101,101s-101-45.219-101-101c0-8.786,1.124-17.309,3.232-25.436  c-3.393,10.536-5.232,21.771-5.232,33.436c0,60.199,48.801,109,109,109s109-48.801,109-109S180.17,3.947,119.971,3.947z"
+                          enable-background="new    " fill="#FF9900" opacity="0.24"/>
+                    <path d="M22.33,118.5C22.33,61.338,68.668,15,125.83,15c55.922,0,101.477,44.353,103.427,99.797  c0.044-1.261,0.073-2.525,0.073-3.797c0-60.198-48.801-109-109-109s-109,48.802-109,109c0,50.111,33.818,92.318,79.876,105.06  C51.073,201.814,22.33,163.519,22.33,118.5z"
+                          fill="#FFEFB5"/>
+                    <circle cx="122.33" cy="113" fill="none" r="109" stroke="#6E6E96" stroke-width="8"/>
+                    <path d="M113.469,179.431  c4.245,27.444-7.498,39.501-23.891,42.037c-16.393,2.535-31.229-5.411-35.474-32.855c-4.244-27.443-2.247-64.63,20.103-66.53  C96.261,120.207,109.224,151.987,113.469,179.431z"
+                          fill="#C7A17B" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="8"/>
+                    <path d="M65.233,214.418c6.6,6.622,15.23,8.46,24.345,7.05c16.393-2.536,28.135-14.593,23.891-42.037  c-0.572-3.695-1.307-7.469-2.196-11.229C87.356,171.511,68.455,190.473,65.233,214.418z"
+                          fill="#FF8CA4"/>
+                    <path d="M76.373,211.858c0,0,6.479-27.752,31.218-38.271c0,0-29.635,0.682-39.698,40.831  C67.893,214.418,72.054,223.247,76.373,211.858z"
+                          fill="#FFABBC"/>
+                    <circle cx="120.33" cy="83.567" fill="#FFFFFF" r="31.5" stroke="#6E6E96" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="8"/>
+                    <circle cx="32.5" cy="82.567" fill="#FFFFFF" r="28.5" stroke="#6E6E96" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="8"/>
+                    <circle cx="22.665" cy="83.902" fill="#6E6E96" r="6.835"/>
+                    <circle cx="107.273" cy="83.902" fill="#6E6E96" r="6.835"/>
+                    <line fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"
+                          x1="91.83" x2="113.706" y1="39.067" y2="17.192"/>
+                    <line fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"
+                          x1="53.687" x2="36.527" y1="45.824" y2="28.664"/>
+                    <path d="M130.341,54.77c7.646,4.561,12.752,12.811,12.752,22.232c0,14.358-11.864,26-26.5,26  c-12.404,0-22.813-8.363-25.701-19.653c-0.037,0.626-0.062,1.255-0.062,1.891c0,17.396,14.103,31.5,31.5,31.5  c17.397,0,31.5-14.104,31.5-31.5C153.83,70.611,143.857,58.314,130.341,54.77z"
+                          fill="#6E6E96" opacity="0.15"/>
+                    <path d="M40.579,59.215c6.458,3.852,10.77,10.82,10.77,18.777c0,12.127-10.021,21.959-22.381,21.959  c-10.477,0-19.269-7.063-21.708-16.599c-0.031,0.529-0.052,1.061-0.052,1.597c0,14.693,11.911,26.605,26.605,26.605  c14.693,0,26.604-11.912,26.604-26.605C60.418,72.594,51.995,62.209,40.579,59.215z"
+                          fill="#6E6E96" opacity="0.15"/>
+                    <path d="M65.233,214.418c0,0-13.5-55.996,9.597-67.351s38.639,32.363,38.639,32.363  s-11.886-57.349-39.262-57.349S49.11,198.295,65.233,214.418z"
+                          fill="#6E6E96" opacity="0.15"/>
+                    <path d="M65.233,214.418  c6.6,6.622,15.23,8.46,24.345,7.05c16.393-2.536,28.135-14.593,23.891-42.037c-0.572-3.695-1.307-7.469-2.195-11.229  C87.356,171.511,68.455,190.473,65.233,214.418z"
+                          fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+                    <path d="M71.435,195.634c0,0-4.605,17.434,7.895,17.434s32.356-18.196,27.675-44.097  c0,0,18.31,46.077-20.663,52.856C86.342,221.827,53.54,220.7,71.435,195.634z"
+                          fill="#6E6E96" opacity="0.15"/></svg>
+            </div>
+            <div v-else-if="basketMark === 'norm'">
+                <svg class="mark-icon" enable-background="new 0 0 226 249.135" height="249.135" id="Layer_1" overflow="visible" version="1.1" viewBox="0 0 226 249.135" width="226" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="113" cy="113" fill="#FFE585" r="109"/><line enable-background="new    " fill="none" opacity="0.29" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="88.866" x2="136.866" y1="245.135" y2="245.135"/><line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="154.732" x2="168.732" y1="245.135" y2="245.135"/><line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="69.732" x2="58.732" y1="245.135" y2="245.135"/><path d="M113.568,3.947c-1.026,0-2.049,0.017-3.068,0.045  c54.425,1.551,98.068,46.155,98.068,100.955c0,55.781-45.219,101-101,101c-55.781,0-101-45.219-101-101  c0-8.786,1.124-17.309,3.232-25.436c-3.393,10.536-5.232,21.771-5.232,33.436c0,60.199,48.801,109,109,109s109-48.801,109-109  S173.768,3.947,113.568,3.947z" enable-background="new    " fill="#FF9900" opacity="0.24"/><path d="M13,118.5C13,61.338,59.338,15,116.5,15c55.922,0,101.477,44.353,103.427,99.797  c0.044-1.261,0.073-2.525,0.073-3.797C220,50.802,171.199,2,111,2S2,50.802,2,111c0,50.111,33.818,92.318,79.876,105.06  C41.743,201.814,13,163.518,13,118.5z" fill="#FFEFB5"/><path d="M218.145,84.162C220.658,93.348,222,103.017,222,113  c0,60.199-48.801,109-109,109S4,173.199,4,113c0-16.846,3.822-32.8,10.646-47.041C32.206,29.31,69.647,4,113,4  C163.216,4,205.501,37.958,218.145,84.162z" fill="none" stroke="#6E6E96" stroke-width="8"/><g><line fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="112.688" x2="70.323" y1="151.781" y2="140.253"/><path d="M48.13,152.95   c38.807-8.176,9.494-34.89,9.494-34.89" fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/><path d="M133.259,138.642   c0,0-38.808,8.177-9.493,34.89" fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/></g><circle cx="72.147" cy="67.135" fill="#6E6E96" r="9"/><circle cx="148.738" cy="85.153" fill="#6E6E96" r="9"/><ellipse cx="139.5" cy="160.817" fill="#FFFFFF" opacity="0.53" rx="9.5" ry="10.75" transform="matrix(0.9139 0.406 -0.406 0.9139 77.3161 -42.7892)"/><ellipse cx="46" cy="132.817" fill="#FFFFFF" opacity="0.53" rx="9.5" ry="10.75" transform="matrix(0.9139 0.406 -0.406 0.9139 57.8922 -7.2363)"/></svg>
+            </div>
+            <div v-else>
+                <svg class="mark-icon" enable-background="new 0 0 247.266 249.135" height="249.135" id="Layer_1" overflow="visible" version="1.1" viewBox="0 0 247.266 249.135" width="247.266" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="129.704" cy="113" fill="#FFE585" r="109"/><path d="M132.272,5.947c-1.024,0-2.049,0.018-3.066,0.046  c54.425,1.551,98.066,46.154,98.066,100.954c0,55.781-45.219,101-101,101c-55.779,0-101-45.219-101-101  c0-8.785,1.124-17.309,3.232-25.436c-3.395,10.536-5.232,21.771-5.232,33.436c0,60.199,48.803,109,109,109  c60.199,0,109-48.801,109-109C241.272,54.748,192.471,5.947,132.272,5.947z" enable-background="new    " fill="#FF9900" opacity="0.24"/><line enable-background="new    " fill="none" opacity="0.29" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="105.57" x2="153.57" y1="245.135" y2="245.135"/><line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="171.436" x2="185.436" y1="245.135" y2="245.135"/><line enable-background="new    " fill="none" opacity="0.17" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" x1="86.436" x2="75.436" y1="245.135" y2="245.135"/><path d="M29.704,118.5c0-57.162,46.338-103.5,103.5-103.5c55.922,0,101.477,44.353,103.427,99.797  c0.044-1.261,0.073-2.525,0.073-3.797c0-60.198-48.803-109-109-109c-60.199,0-109,48.802-109,109  c0,50.11,33.816,92.317,79.876,105.06C58.447,201.814,29.704,163.518,29.704,118.5z" fill="#FFEFB5"/><g><path d="M58.559,110.208   c-1.01,35.095,11.188,65.915,40.574,74.19c29.385,8.275,66.893-8.545,84.348-39.008L58.559,110.208z" fill="#C7A17B" stroke="#6E6E96" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/></g><path d="M73.116,20.438C89.826,10.019,109.562,4,130.704,4  c60.197,0,109,48.801,109,109c0,60.198-48.803,109-109,109c-60.199,0-109-48.802-109-109c0-13.416,2.424-26.267,6.856-38.137" fill="none" stroke="#6E6E96" stroke-linecap="round" stroke-width="8"/><circle cx="108.969" cy="66.439" fill="#6E6E96" r="9"/><circle cx="172.053" cy="82.976" fill="#6E6E96" r="9"/><g><path d="M52.438,67.395c2.273-6.92,9.341-15.407,15.737-18.891l0.024-0.014   c6.428-3.473,6.428-9.143,0-12.609l-0.024-0.021C61.778,32.392,54.34,24.576,51.646,18.5c-2.691-6.086-7.098-6.086-9.794,0   c-2.685,6.084-10.13,13.896-16.557,17.36l-0.03,0.024c-6.409,3.468-6.409,9.134,0,12.61l0.03,0.012   c6.427,3.469,13.477,11.969,15.734,18.889l1.62,4.896c2.261,6.926,5.917,6.926,8.194,0L52.438,67.395z" fill="#CFD3FF" stroke="#6E6E96" stroke-width="8"/></g><path d="M62.515,144.648c0,0,61.245-27.579,93.932,28.92  c0,0,27.034-21.853,27.034-28.177L58.559,110.208C58.559,110.208,51.496,133.63,62.515,144.648z" enable-background="new    " fill="#6E6E96" opacity="0.25"/></svg>
+            </div>
+{#            <p class="shop-text">[[ basketMark ]]</p>#}
+
+
+            <button :disabled="isDisabled" class="next-btn" @click="nextPage">
+                Продолжить
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="{% static 'js/Axios.js' %}"></script>
+    <script src="{% static 'js/Cookie.js' %}"></script>
+    <script src="{% static 'js/Vue.js' %}"></script>
+    <script src="{% static 'js/products_play/shop.vue.js' %}"></script>
+{% endblock content %}

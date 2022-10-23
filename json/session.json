@@ -1,0 +1,72 @@
+[
+  {
+    "model": "accounts.session",
+    "pk": 1,
+    "fields": {
+      "sessions_full": "Сессия 1"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 2,
+    "fields": {
+      "sessions_full": "Сессия 2"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 3,
+    "fields": {
+      "sessions_full": "Сессия 3"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 4,
+    "fields": {
+      "sessions_full": "Сессия 4"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 5,
+    "fields": {
+      "sessions_full": "Сессия 5"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 6,
+    "fields": {
+      "sessions_full": "Сессия 6"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 7,
+    "fields": {
+      "sessions_full": "Сессия 7"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 8,
+    "fields": {
+      "sessions_full": "Сессия 8"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 9,
+    "fields": {
+      "sessions_full": "Сессия 9"
+    }
+  },
+  {
+    "model": "accounts.session",
+    "pk": 10,
+    "fields": {
+      "sessions_full": "Сессия 10"
+    }
+  }
+]

@@ -1,0 +1,84 @@
+{% extends '_base.html' %}
+{% load static %}
+
+{% block title %}Уровни{% endblock title %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+{% endblock %}
+{% block money %}
+    <a href="#" class="header__money">Ваш баланс: {% if user.is_authenticated %} {{ user.money }} {% endif %} </a>
+{% endblock %}
+
+
+
+
+{% block content %}
+    <section class="section">
+
+        <div class="stages-line" id="line">
+            <div class="stage stage--first"
+                 style="background-image: url({% static 'images/screen_1/garden_1.jpg' %});"></div>
+            <div class="stage stage--second"
+                 style="background-image: url({% static 'images/screen_1/gori_1.png' %});"></div>
+            <div class="stage stage--third"
+                 style="background-image: url({% static 'images/screen_1/porch_1.jpg' %});"></div>
+            <div class="stage--none"></div>
+            <div class="stage--none"></div>
+
+            <div class="stage stage--forth" id="room"
+                 style="background-image: url({% static 'images/screen_1/room_1.jpg' %});"></div>
+            <div class="stage stage--forth" id="room"
+                 style="background-image: url({% static 'images/screen_1/room_sit_1.png' %});"></div>
+            <div class="stage stage--forth" id="room"
+                 style="background-image: url({% static 'images/screen_1/room_stand_1.jpg' %});"></div>
+            <div class="stage stage--forth" id="room"
+                 style="background-image: url({% static 'images/screen_1/room_friends.jpg' %});"></div>
+        </div>
+
+        <div class="background">
+            <div class="desc" id="desc">
+                <p class="main__text text" id="desc__text">
+                    Представьте перед вами прекрасные горные пейзажи Каваказа, ветер обдувает ваше лицо, вы несетесь
+                    вдаль на
+                    Porsche Cayenne и ощущаете вкус счастья. НО!
+                </p>
+
+                <p class="main__text text" id="desc__text">
+                    НО! Вдруг незадача - вы просыпаетесь в своей Ростовской камуналке, на вас дует всего лишь
+                    вентилятор, за окном пейзаж из серых панелек, а под подъездом у вас стоит не Porsche Cayenne, а
+                    доставшийся от дедушки
+                    советский велосипед. Грустненько.......
+                </p>
+
+                <p class="main__text text text--short" id="desc__text">
+                    Так же подумал и наш герой Валерчик и решил всё изменить! "Кто зарабатывает много денег? Правильно -
+                    бИзНесМэНы" - подумал он и решил полностью изменить свою жизнь: открыть бизнес, заработать много
+                    денег и
+                    купить Porsche Cayenne!
+                </p>
+
+                <p class="main__text text text--left" id="desc__text">
+                    На радостях он позвонил другу и рассказал о своих грандиозных планах, но тот ответил....
+                </p>
+
+                <p class="main__text text text--short" id="desc__text">
+                    Какой тебе бизнес !? Ты всю зарплату за пару дней сливаешь! Финансовой грамотности сначала хоть
+                    обучись...
+                </p>
+
+
+            </div>
+
+            <div class="btn-area">
+                <a href="{% url 'lesson_page' %}">
+                    <button class="btn btn--center">ОБУЧИТЬСЯ</button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock content %}
+{% block javascript %}
+    <script src="{% static 'js/screen_1/switching.js' %}"></script>
+{% endblock javascript %}
