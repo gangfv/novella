@@ -1,3 +1,6 @@
+const nextBtn = document.querySelector('.next-btn')
+
+
 function FormDataCreator(data) {
     const formObj = {...data}
 
@@ -41,13 +44,35 @@ const costs = {
     ticket: 700
 }
 
+const marks = {
+    bread: 0,
+    nike: 2,
+    choco: 1,
+    shoos: 0,
+    sweets: 2,
+    chick: 0,
+    socks: 1,
+    gucci: 2,
+    medicine: 0,
+    dino: 1,
+    dish: 1,
+    watch: 2,
+    jacket: 0,
+    grechka: 0,
+    sigi: 2,
+    water: 0,
+    gold: 2,
+    ticket: 1
+}
+
 
 const Shop = {
     delimiters: ['[[', ']]'],
     data: () => ({
         products: [],
         money: 0,
-        currentMoney: 0
+        currentMoney: 0,
+        basketMark: 'Отлично'
     }),
     created() {
         getMoney().then(res => {
@@ -56,13 +81,41 @@ const Shop = {
             this.currentMoney = money
         })
     },
+    updated() {
+
+        if (this.currentMoney < 0) nextBtn.style.display = 'none';
+        else nextBtn.style.display = 'inline-block'
+    },
     watch: {
         products(current, old) {
-            const fullCost = current.map(product => costs[product]).reduce( (sum, cost) => sum + cost, )
+            const fullCost = current.map(product => costs[product]).reduce((sum, cost) => sum + cost,)
             this.currentMoney = this.money - fullCost
+
+            function countMarks(values, mark) {
+                return values.filter(val => val === mark).length
+            }
+
+            const values = current.map(product => marks[product])
+
+            if(countMarks(values, 2 || this.currentMoney < 0) >= 1) {
+                this.basketMark = 'Очень плохо'
+            } else if (countMarks(values, 1) > 2) {
+                this.basketMark = 'Нормально'
+            } else {
+                this.basketMark = 'Отлично'
+            }
         }
     },
-    methods: {}
+    computed: {
+        isDisabled() {
+            return this.currentMoney < 0
+        },
+    },
+    methods: {
+        nextPage() {
+            window.location.href = document.URL + 'invest_easy'
+        }
+    }
 }
 
 Vue.createApp(Shop).mount('#app')

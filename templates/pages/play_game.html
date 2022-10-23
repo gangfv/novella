@@ -165,9 +165,16 @@
                 </div>
             </div>
 
-            <div>
-                <p>[[ currentMoney ]]</p>
-                <a href="{% url 'invest_easy' %}">Продолжить</a>
+            <div class="wrapper">
+                <p class="shop-text">Осталось денег на покупки: <span class="green weight">[[ currentMoney ]] руб.</span></p>
+
+                <p class="shop-text">[[ basketMark ]]</p>
+
+
+                <button :disabled="isDisabled" class="next-btn" @click="">
+                    Продолжить
+                </button>
+
             </div>
 
     </section>
