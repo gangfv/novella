@@ -72,7 +72,7 @@ const Shop = {
         products: [],
         money: 0,
         currentMoney: 0,
-        basketMark: 'Отлично'
+        basketMark: 'good'
     }),
     created() {
         getMoney().then(res => {
@@ -98,11 +98,11 @@ const Shop = {
             const values = current.map(product => marks[product])
 
             if(countMarks(values, 2 || this.currentMoney < 0) >= 1) {
-                this.basketMark = 'Очень плохо'
+                this.basketMark = 'bad'
             } else if (countMarks(values, 1) > 2) {
-                this.basketMark = 'Нормально'
+                this.basketMark = 'norm'
             } else {
-                this.basketMark = 'Отлично'
+                this.basketMark = 'good'
             }
         }
     },

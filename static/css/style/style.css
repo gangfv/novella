@@ -569,6 +569,12 @@ body {
   margin-bottom: 20px;
 }
 
+.mark-icon {
+  width: 60px;
+  height: 60px;
+
+}
+
 .green {
   color: #50b848;
 }
